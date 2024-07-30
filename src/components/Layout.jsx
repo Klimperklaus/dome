@@ -7,13 +7,13 @@ import "./Layout.css";
 function Layout() {
   return (
     <>
-      <header className="top-0 fixed bg-white/15 w-full">
+      <header className="top-0 w-full bg-white/10">
         <Navbar />
       </header>
-      <main className="top-7 fixed w-full bg-white/15 overflow-auto">
+      <main className="top-8 fixed w-full bg-white/10 overflow-auto">
         <Outlet />
       </main>
-      <footer className="bottom-0 text-center fixed w-full bg-white/15">
+      <footer className="bottom-0 fixed w-full text-center bg-white/10">
         <Footer />
       </footer>
     </>
