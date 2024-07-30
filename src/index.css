@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-image: radial-gradient(
+    circle,
+    #272727,
+    #1f1f1f,
+    #171717,
+    #0e0e0e,
+    #000000
+  );
+
+  color: whitesmoke;
+}
