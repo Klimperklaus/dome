@@ -1,7 +1,11 @@
 import React from "react";
 
 function Referenzen() {
-  return <div>Referenzen</div>;
+  return (
+    <>
+      <h1>Referenzen</h1>
+    </>
+  );
 }
 
 export default Referenzen;

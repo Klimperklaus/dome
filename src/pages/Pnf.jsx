@@ -15,7 +15,11 @@ function Pnf() {
     }
   }, [countDown]);
 
-  return <>Page not found, redirecting in {countDown} ...</>;
+  return (
+    <div className="flex justify-center items-center h-full">
+      <h1>Page not found, redirecting in {countDown} ...</h1>
+    </div>
+  );
 }
 
 export default Pnf;

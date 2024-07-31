@@ -7,10 +7,10 @@ import "./Layout.css";
 function Layout() {
   return (
     <>
-      <header className="top-0 w-full bg-white/10">
+      <header className="top-0 w-full bg-white/10 shadow-sm shadow-white flex justify-between items-center py-1 px-2">
         <Navbar />
       </header>
-      <main className="top-8 fixed w-full bg-white/10 overflow-auto">
+      <main className="top-14 px-3 fixed w-full bg-white/10 overflow-auto shadow-sm shadow-white flex justify-center items-center">
         <Outlet />
       </main>
       <footer className="bottom-0 fixed w-full text-center bg-white/10">
