@@ -12,7 +12,7 @@ function Navbar() {
         </button>
         <div className="dropdown-content">
           <NavLink className="link" to="/">
-            Willkommen
+            Startseite
           </NavLink>
           <NavLink className="link" to="/references">
             Referenzen
