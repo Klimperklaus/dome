@@ -39,12 +39,15 @@ function Navbar() {
         </a>
         <a
           className="yt-text bg-red-600 rounded-md py-0.5 font-bold shadow-inner shadow-white/30"
-          href="#"
+          href="https://www.youtube.com/@der_blenderdulli"
           target="_blank"
         >
           YouTube
         </a>
-        <div className="slider"></div>
+        <label className="switch">
+          <input type="checkbox" />
+          <span className="slider rounded-full before:rounded-full"></span>
+        </label>
       </div>
     </>
   );

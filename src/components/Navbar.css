@@ -11,7 +11,7 @@
 .dropdown-content {
   display: none;
   position: absolute;
-  margin-top: 0.8rem;
+  margin-top: 2.2rem;
   width: 130px;
   z-index: 1;
 }
@@ -37,12 +37,6 @@
   display: block;
 }
 
-.slider {
-  width: 48px;
-  height: 24px;
-  background-color: red;
-}
-
 .twitch-text {
   font-family: twitchy;
   -webkit-text-stroke: 0.5px black;
@@ -50,4 +44,47 @@
 
 .yt-text {
   -webkit-text-stroke: 0.5px black;
+}
+
+/* Feed slider */
+
+.switch {
+  position: relative;
+  width: 72px;
+  height: 24px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  background-color: grey;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: 0.5s;
+}
+
+.slider::before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.5s;
+}
+
+input:checked + .slider {
+  background-color: green;
+}
+
+input:checked + .slider::before {
+  transform: translateX(48px);
 }
