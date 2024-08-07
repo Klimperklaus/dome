@@ -7,7 +7,7 @@ function Navbar() {
   return (
     <>
       <div className="dropdown">
-        <button>
+        <button className="focus:bg-white rounded-full my-2">
           <img src={menu} alt="menu" />
         </button>
         <div className="dropdown-content">
@@ -28,7 +28,24 @@ function Navbar() {
           </NavLink>
         </div>
       </div>
-      <h1>3D Artist aus Leidenschaft</h1>
+      <h1>Der_Blenderdulli</h1>
+      <div className="flex flex-col gap-2 py-1 text-center">
+        <a
+          className="twitch-text bg-purple-600 px-2 py-0.5 rounded-md font-bold shadow-inner shadow-yellow-500/50"
+          href="https://www.twitch.tv/der_blenderdulli"
+          target="_blank"
+        >
+          Twitch
+        </a>
+        <a
+          className="yt-text bg-red-600 rounded-md py-0.5 font-bold shadow-inner shadow-white/30"
+          href="#"
+          target="_blank"
+        >
+          YouTube
+        </a>
+        <div className="slider"></div>
+      </div>
     </>
   );
 }

@@ -44,7 +44,7 @@ function Kontakt() {
           ></textarea>
         </div>
         <br />
-        <button className="border-2 border-slate-400 p-2 rounded-xl bg-slate-600">
+        <button className="border-2 border-slate-400 p-2 rounded-xl bg-slate-600 active:scale-90 active:border-white active:bg-slate-400">
           Nachricht versenden
         </button>
       </form>
