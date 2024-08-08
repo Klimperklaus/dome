@@ -60,9 +60,23 @@
   height: 0;
 }
 
+.text-position-right {
+  text-align: right;
+  padding-top: 4px;
+  padding-right: 4px;
+}
+
+.text-position-left {
+  text-align: left;
+  padding-top: 4px;
+  padding-left: 4px;
+}
+
 .slider {
   position: absolute;
   background-color: grey;
+  font-size: x-small;
+  font-weight: bold;
   top: 0;
   left: 0;
   right: 0;

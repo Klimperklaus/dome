@@ -1,9 +1,16 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import menu from "../assets/menu.png";
 import { NavLink } from "react-router-dom";
 import "./Navbar.css";
 
 function Navbar() {
+  const [feedText, setFeedText] = useState(null);
+  const [isChecked, setIsChecked] = useState(false);
+
+  useEffect(() => {
+    isChecked ? setFeedText("ON") : setFeedText("OFF");
+  }, [isChecked]);
+
   return (
     <>
       <div className="dropdown">
@@ -45,8 +52,22 @@ function Navbar() {
           YouTube
         </a>
         <label className="switch">
-          <input type="checkbox" />
-          <span className="slider rounded-full before:rounded-full"></span>
+          <input
+            className="switch-checkbox"
+            type="checkbox"
+            onChange={(e) => {
+              setIsChecked(e.target.checked);
+            }}
+          />
+          <span
+            className={
+              isChecked
+                ? "slider text-position-left rounded-full before:rounded-full"
+                : "slider text-position-right rounded-full before:rounded-full"
+            }
+          >
+            Feed: {feedText}
+          </span>
         </label>
       </div>
     </>
