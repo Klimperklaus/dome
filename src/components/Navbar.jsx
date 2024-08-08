@@ -38,14 +38,14 @@ function Navbar() {
       <h1>Der_Blenderdulli</h1>
       <div className="flex flex-col gap-2 py-1 text-center">
         <a
-          className="twitch-text bg-purple-600 px-2 py-0.5 rounded-md font-bold shadow-inner shadow-yellow-500/50"
+          className="twitch-text bg-purple-600 px-2 py-0.5 rounded-md shadow-inner shadow-yellow-500/50"
           href="https://www.twitch.tv/der_blenderdulli"
           target="_blank"
         >
           Twitch
         </a>
         <a
-          className="yt-text bg-red-600 rounded-md py-0.5 font-bold shadow-inner shadow-white/30"
+          className="yt-text bg-red-600 rounded-md py-0.5 shadow-inner shadow-white/30"
           href="https://www.youtube.com/@der_blenderdulli"
           target="_blank"
         >

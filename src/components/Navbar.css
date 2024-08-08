@@ -3,6 +3,11 @@
   src: url(../assets/twitch-font.ttf);
 }
 
+@font-face {
+  font-family: yt;
+  src: url(../assets/yt-font.ttf);
+}
+
 .dropdown {
   position: relative;
   display: inline-block;
@@ -43,6 +48,7 @@
 }
 
 .yt-text {
+  font-family: yt;
   -webkit-text-stroke: 0.5px black;
 }
 
