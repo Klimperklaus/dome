@@ -1,13 +1,49 @@
 import React, { useEffect, useState } from "react";
-import menu from "../assets/menu.png";
+import menuImg from "../assets/menu.png";
 import { NavLink } from "react-router-dom";
 import "./Navbar.css";
 
 function Navbar() {
   const [feedText, setFeedText] = useState(null);
   const [isChecked, setIsChecked] = useState(false);
+  const [serverData, setServerData] = useState(null);
+
+  // 
+
+  // get token
+  /**
+    https://id.twitch.tv/oauth2/authorize
+    ?response_type=token
+    &client_id=4ly8kennhu9c66pdxups9nuvkcukbo
+    &redirect_uri=http://localhost:5173/
+    &scope=channel:read:stream_key
+   */
+
+  // dulli id: 543116171
+
+  async function fetchData() {
+    try {
+      const response = await fetch(
+        "https://api.twitch.tv/helix/streams?user_id=540056482",
+        {
+          headers: {
+            "Client-Id": "4ly8kennhu9c66pdxups9nuvkcukbo",
+            "Authorization": "Bearer 47f9y7jr49qq4k4kjjtokitjq12mzn",
+          },
+        }
+      );
+      const data = await response.json();
+      setServerData(data);
+      console.log(data);
+    } catch (error) {
+      console.error(error);
+    }
+  }
 
   useEffect(() => {
+    if (!serverData) {
+      fetchData();
+    }
     isChecked ? setFeedText("ON") : setFeedText("OFF");
   }, [isChecked]);
 
@@ -15,7 +51,7 @@ function Navbar() {
     <>
       <div className="dropdown">
         <button className="focus:bg-white rounded-full my-2">
-          <img src={menu} alt="menu" />
+          <img src={menuImg} alt="menu" />
         </button>
         <div className="dropdown-content">
           <NavLink className="link" to="/">

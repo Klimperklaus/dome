@@ -43,8 +43,38 @@
 }
 
 .twitch-text {
+  position: relative;
   font-family: twitchy;
   -webkit-text-stroke: 0.5px black;
+}
+
+.twitch-text::before {
+  position: absolute;
+  left: -48px;
+  content: "LIVE";
+  -webkit-text-stroke: 0.5px #ff3c3c;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bold;
+  color: #fdd5d5;
+  text-shadow: 0 0 5px #fa2121, 0 0 6px #fa2121, 0 0 8px #fa2121,
+    0 0 12px #ff4646, 0 0 16px #ff4646, 0 0 20px #ff4646, 0 0 25px #ff4646,
+    0 0 35px #ff4646, 2px 2px 2px rgba(206, 89, 55, 0);
+  animation: blink 1s linear infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 .yt-text {
