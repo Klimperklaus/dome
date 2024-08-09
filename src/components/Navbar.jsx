@@ -8,7 +8,7 @@ function Navbar() {
   const [isChecked, setIsChecked] = useState(false);
   const [serverData, setServerData] = useState(null);
 
-  // 
+  //
 
   // get token
   /**
@@ -24,7 +24,7 @@ function Navbar() {
   async function fetchData() {
     try {
       const response = await fetch(
-        "https://api.twitch.tv/helix/streams?user_id=540056482",
+        "https://api.twitch.tv/helix/streams?user_id=543116171",
         {
           headers: {
             "Client-Id": "4ly8kennhu9c66pdxups9nuvkcukbo",
@@ -74,7 +74,11 @@ function Navbar() {
       <h1>Der_Blenderdulli</h1>
       <div className="flex flex-col gap-2 py-1 text-center">
         <a
-          className="twitch-text bg-purple-600 px-2 py-0.5 rounded-md shadow-inner shadow-yellow-500/50"
+          className={
+            serverData && serverData.data.length > 0
+              ? "twitch-text-live bg-purple-600 px-2 py-0.5 rounded-md shadow-inner shadow-yellow-500/50"
+              : "twitch-text bg-purple-600 px-2 py-0.5 rounded-md shadow-inner shadow-yellow-500/50"
+          }
           href="https://www.twitch.tv/der_blenderdulli"
           target="_blank"
         >

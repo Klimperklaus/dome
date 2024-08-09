@@ -48,7 +48,13 @@
   -webkit-text-stroke: 0.5px black;
 }
 
-.twitch-text::before {
+.twitch-text-live {
+  position: relative;
+  font-family: twitchy;
+  -webkit-text-stroke: 0.5px black;
+}
+
+.twitch-text-live::before {
   position: absolute;
   left: -48px;
   content: "LIVE";
